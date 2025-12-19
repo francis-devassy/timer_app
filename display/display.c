@@ -3,48 +3,44 @@
 //  All Rights Reserved
 //******************************************************************************
 // 
-// File		: main.c
-// Summary	: Prints system time
-// Note		: Prints system time
+// File		: dispaly.c
+// Summary	: Controls display module
+// Note		: Controls display module
 // Author	: Francis V D
-// Date		: 18-December-2025
+// Date		: 19-December-2025
 // 
 //******************************************************************************
  
 //******************************* Include Files ********************************
 #include <stdio.h>
 #include <stdbool.h>
-#include <time.h>
-#include <unistd.h>
 #include "customTypes.h"
-#include "display.h"
-//#include "appTimer.h"
-
 //******************************* Local Types **********************************
  
 //***************************** Local Constants ********************************
-#define MESSAGE "Hello, World !\n"
+ 
 //***************************** Local Variables ********************************
  
 //****************************** Local Functions *******************************
 
 //******************************.FUNCTION_HEADER.*******************************
-//Purpose	: Main function, display messages and system time.
-//Inputs	: None
-//Outputs	: None
-//Return	: Return 0 at time of successfull execution
-//Notes		: Main function, display messages and system time.
+//Purpose	: Display the recrived string
+//Inputs	: pucMessageStr (const uint8*) - The message to be displayed
+//Outputs	: None (prints directly to stdout)
+//Return	: blReturn (bool) – true if message displayed successfully
+//Return	: blReturn (bool) – false if any issue in display the message
+//Notes		: Display the recrived strings
 //******************************************************************************
-int main (void)
+bool displayShow(const uint8* pucMessageStr)
 {
-	time_t lRawTime = 0;	
+	bool blReturn = false;
 	
-	while (1)
+	if(pucMessageStr)
 	{
-		displayShow((const uint8*)MESSAGE);
-		
-		sleep(1);
+		printf("%s",pucMessageStr);
+		blReturn = true;
 	}
-	return 0;
+	
+	return blReturn;
 }
 // EOF
