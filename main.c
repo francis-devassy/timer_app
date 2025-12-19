@@ -17,7 +17,6 @@
 #include <time.h>
 #include <unistd.h>
 #include "customTypes.h"
-#include "display.h"
 
 //******************************* Local Types **********************************
  
@@ -40,7 +39,7 @@ int main (void)
 	
 	while (1)
 	{
-		displayShow((const uint8*)MESSAGE);
+		printf(MESSAGE);
 		
 		sleep(1);
 	}
