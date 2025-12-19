@@ -3,7 +3,7 @@
 //  All Rights Reserved
 //******************************************************************************
 // 
-// File		: dispaly.c
+// File		: display.c
 // Summary	: Controls display module
 // Note		: Controls display module
 // Author	: Francis V D
@@ -15,6 +15,7 @@
 #include <stdio.h>
 #include <stdbool.h>
 #include "customTypes.h"
+
 //******************************* Local Types **********************************
  
 //***************************** Local Constants ********************************
@@ -24,9 +25,9 @@
 //****************************** Local Functions *******************************
 
 //******************************.FUNCTION_HEADER.*******************************
-//Purpose	: Display the recrived string
+//Purpose	: Display the received string
 //Inputs	: pucMessageStr (const uint8*) - The message to be displayed
-//Outputs	: None (prints directly to stdout)
+//Outputs	: None
 //Return	: blReturn (bool) – true if message displayed successfully
 //Return	: blReturn (bool) – false if any issue in display the message
 //Notes		: Display the recrived strings

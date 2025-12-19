@@ -7,7 +7,7 @@
 // Summary	: Prints system time
 // Note		: Prints system time
 // Author	: Francis V D
-// Date		: 18-December-2025
+// Date		: 19-December-2025
 // 
 //******************************************************************************
  
@@ -18,12 +18,12 @@
 #include <unistd.h>
 #include "customTypes.h"
 #include "display.h"
-//#include "appTimer.h"
 
 //******************************* Local Types **********************************
  
 //***************************** Local Constants ********************************
 #define MESSAGE "Hello, World !\n"
+
 //***************************** Local Variables ********************************
  
 //****************************** Local Functions *******************************
@@ -37,7 +37,6 @@
 //******************************************************************************
 int main (void)
 {
-	time_t lRawTime = 0;	
 	
 	while (1)
 	{

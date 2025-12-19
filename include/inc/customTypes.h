@@ -30,6 +30,5 @@ typedef signed long    int32;   // 32-bit signed
 
 //**************************** Forward Declarations ****************************
 
-
 #endif // _CUSTOM_TYPES_H_
 // EOF

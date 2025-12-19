@@ -1,8 +1,18 @@
 CC = gcc
-CFLAGS = -Wall -I./display -I./include/inc
+CFLAGS = -Wall
 
-main: main.c display/display.c
-	$(CC) $(CFLAGS) main.c display/display.c -o main
+INCLUDES  =
+INCLUDES += -I./display
+INCLUDES += -I./include/inc
+
+CFLAGS += $(INCLUDES)
+
+SRCS  = 
+SRCS += main.c
+SRCS += display/display.c
+
+main: $(SRCS)
+	$(CC) $(CFLAGS) $(SRCS) -o timerApp
 
 clean:
-	rm -f main
+	rm -f timerApp
